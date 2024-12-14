@@ -2,11 +2,12 @@ from fasthtml.common import *
 # Define ASCII art constant here - paste your art between the triple quotes
 # ASCII Art from https://www.asciiart.eu/text-to-ascii-art
 
+
 ASCII_ART = """
     ███     ▄██   ▄    ▄█          ▄████████    ▄████████       ▄████████    ▄████████  ▄██████▄     ▄████████    ▄████████
 ▀█████████▄ ███   ██▄ ███         ███    ███   ███    ███      ███    ███   ███    ███ ███    ███   ███    ███   ███    ███
    ▀███▀▀██ ███▄▄▄███ ███         ███    █▀    ███    ███      ███    █▀    ███    ███ ███    ███   ███    █▀    ███    █▀ 
-    ███   ▀ ▀▀▀▀▀▀███ ███        ▄███▄▄▄      ▄███▄▄▄▄██▀      ███         ▄███▄▄▄▄██▀ ███    ███   ███          ███       
+    ███   ▀ ▀▀▀▀▀▀███ ███        ▄███▄▄▄      ▄███▄▄▄▄██▀      ███         ▄███▄▄▄▄██▀ ███    ███   ███          ███      
     ███     ▄██   ███ ███       ▀▀███▀▀▀     ▀▀███▀▀▀▀▀        ███        ▀▀███▀▀▀▀▀   ███    ███ ▀███████████ ▀███████████
     ███     ███   ███ ███         ███    █▄  ▀███████████      ███    █▄  ▀███████████ ███    ███          ███          ███
     ███     ███   ███ ███▌    ▄   ███    ███   ███    ███      ███    ███   ███    ███ ███    ███    ▄█    ███    ▄█    ███
@@ -22,15 +23,10 @@ app = FastHTML(hdrs=(css))
 
 def get():
     return (
-        Title("Home"), 
+        Title("home"), 
         Main(
-            Pre(ASCII_ART, cls="ascii-art"),  # ASCII art wrapped in Pre tag
-            H1("Hello, my name is Tyler"),
-            P("I'm a machine learning engineer"),
-            P("and this is my personal site"),
-            P("..."),
-            cls="container"
+            Pre(ASCII_ART, cls="ascii-art"),
+            P("Hello, my name is Tyler <3"),
         )
     )
-
 serve()
