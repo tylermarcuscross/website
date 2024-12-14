@@ -1,6 +1,4 @@
 from fasthtml.common import *
-from pathlib import Path
-
 # Define ASCII art constant here - paste your art between the triple quotes
 ASCII_ART = """
     ███     ▄██   ▄    ▄█          ▄████████    ▄████████       ▄████████    ▄████████  ▄██████▄     ▄████████    ▄████████
