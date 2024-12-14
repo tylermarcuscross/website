@@ -1,5 +1,7 @@
 from fasthtml.common import *
 # Define ASCII art constant here - paste your art between the triple quotes
+# ASCII Art from https://www.asciiart.eu/text-to-ascii-art
+
 ASCII_ART = """
     ███     ▄██   ▄    ▄█          ▄████████    ▄████████       ▄████████    ▄████████  ▄██████▄     ▄████████    ▄████████
 ▀█████████▄ ███   ██▄ ███         ███    ███   ███    ███      ███    ███   ███    ███ ███    ███   ███    ███   ███    ███
