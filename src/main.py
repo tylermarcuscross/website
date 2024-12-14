@@ -1,24 +1,36 @@
-from fasthtml.common import Style, FastHTML, Title, Main, H1, P
+from fasthtml.common import *
 from pathlib import Path
 
-# Get the path to the CSS file
-css_path = Path(__file__).parent / "static" / "css" / "terminal.css"
+# Define ASCII art constant here - paste your art between the triple quotes
+ASCII_ART = """
+    ███     ▄██   ▄    ▄█          ▄████████    ▄████████       ▄████████    ▄████████  ▄██████▄     ▄████████    ▄████████
+▀█████████▄ ███   ██▄ ███         ███    ███   ███    ███      ███    ███   ███    ███ ███    ███   ███    ███   ███    ███
+   ▀███▀▀██ ███▄▄▄███ ███         ███    █▀    ███    ███      ███    █▀    ███    ███ ███    ███   ███    █▀    ███    █▀ 
+    ███   ▀ ▀▀▀▀▀▀███ ███        ▄███▄▄▄      ▄███▄▄▄▄██▀      ███         ▄███▄▄▄▄██▀ ███    ███   ███          ███       
+    ███     ▄██   ███ ███       ▀▀███▀▀▀     ▀▀███▀▀▀▀▀        ███        ▀▀███▀▀▀▀▀   ███    ███ ▀███████████ ▀███████████
+    ███     ███   ███ ███         ███    █▄  ▀███████████      ███    █▄  ▀███████████ ███    ███          ███          ███
+    ███     ███   ███ ███▌    ▄   ███    ███   ███    ███      ███    ███   ███    ███ ███    ███    ▄█    ███    ▄█    ███
+   ▄████▀    ▀█████▀  █████▄▄██   ██████████   ███    ███      ████████▀    ███    ███  ▀██████▀   ▄████████▀   ▄████████▀ 
+                      ▀                        ███    ███                   ███    ███                                    
+ """
 
-# Read the CSS file
-with open(css_path) as f:
-    terminal_style = Style(f.read())
+css = Style(open('src/static/css/terminal.css').read(), type="text/css", rel="stylesheet")
 
-app = FastHTML(hdrs=(terminal_style,))
+app = FastHTML(hdrs=(css))
 
 @app.route("/")
+
 def get():
     return (
-        Title("Terminal"), 
+        Title("Home"), 
         Main(
+            Pre(ASCII_ART, cls="ascii-art"),  # ASCII art wrapped in Pre tag
             H1("Hello, my name is Tyler"),
-            P("I'm a software engineer"),
+            P("I'm a machine learning engineer"),
             P("and this is my personal site"),
             P("..."),
             cls="container"
         )
     )
+
+serve()

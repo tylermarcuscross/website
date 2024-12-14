@@ -2,8 +2,9 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Courier New', monospace;
-    padding: 20px;
     line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
 h1, p {
@@ -12,8 +13,16 @@ h1, p {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .cursor {
