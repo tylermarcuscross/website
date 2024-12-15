@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.terminal-links li');
     let currentIndex = 0;
     
-    // Initial selection
     links[currentIndex].classList.add('selected');
     
     document.addEventListener('keydown', function(e) {

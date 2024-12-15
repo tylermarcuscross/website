@@ -18,10 +18,6 @@ body {
     padding: 20px;
 }
 
-.ascii-art, .typing-text {
-    margin: 0;
-}
-
 .ascii-art {
     white-space: pre;
     line-height: 1;
@@ -32,7 +28,6 @@ body {
 .terminal-links {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
 }
 
 .terminal-links li {
