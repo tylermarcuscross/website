@@ -9,7 +9,7 @@ A minimalist terminal-style personaxl website built with HTML, CSS, and JavaScri
 - Keyboard navigation (arrow keys + enter)
 
 ## Live Site
-[https://tylermarcuscross.github.io/website/](Link!)
+[Link!](https://tylermarcuscross.github.io/website/)
 
 ## Local Development
 Clone and open `index.html` in your browser - no build process required.
