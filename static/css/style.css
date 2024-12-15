@@ -1,14 +1,12 @@
-
 @font-face {
-    font-family: 'DOS VGA';
-    src: url('../fonts/perfect_dos_vga_437-webfont.woff2') format('woff2'),
-         url('../fonts/perfect_dos_vga_437-webfont.woff') format('woff');
+    font-family: 'IBM_VGA';
+    src: url('../fonts/JuliaMono-Regular.woff2.woff') format('woff');
 }
 
 body {
     background-color: #000000;
     color: #ffffff;
-    font-family: 'DOS VGA', monospace;
+    font-family: 'IBM_VGA', monospace;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
