@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 """
 
+
 css = Style(open('src/static/css/terminal.css').read(), type="text/css", rel="stylesheet")
 
 app = FastHTML(hdrs=(css, Script(nav_script)))
@@ -57,10 +58,19 @@ def get():
             Ul(
                 Li(A("github", href="https://github.com/tylermarcuscross")),
                 Li(A("substack", href="https://substack.com/@tylercross/notes")),
-                Li(A("cv", href="/static/cv.pdf")),
+                Li(A("cv", href="https://drive.google.com/file/d/1u5t3k5stg522heW1WXffgsAcLCBCuYd2/view?usp=sharing")),
                 cls="terminal-links"
             )
         )
     )
+
+
+@app.route("/{fname:path}.{ext:static}")
+async def get(fname:str, ext:str): 
+    try:
+        return FileResponse(f'src/static/{fname}.{ext}')
+    except FileNotFoundError:
+        print(f"File not found: src/static/{fname}.{ext}")
+        return Response(status_code=404)
 
 serve()
