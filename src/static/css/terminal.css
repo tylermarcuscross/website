@@ -21,3 +21,29 @@ body {
     padding: 0;
     line-height: 1;
 }
+
+.terminal-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.terminal-links li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.terminal-links li:before {
+    content: '$ ';
+    color: #0f0;
+}
+
+.terminal-links li.selected {
+    background-color: #0f0;
+    color: #000;
+}
+
+.terminal-links a {
+    text-decoration: none;
+    color: inherit;
+}
