@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const text = document.querySelector('.typing-text');
+    const content = text.textContent;
+    text.textContent = '';
+    let i = 0;
+
+    function type() {
+        if (i < content.length) {
+            text.textContent = content.slice(0, i + 1);
+            i++;
+            setTimeout(type, 35);
+        }
+    }
+
+    type();
+
     const links = document.querySelectorAll('.terminal-links li');
     let currentIndex = 0;
     

@@ -1,22 +1,31 @@
+:root {
+    --terminal-green: #0f0;
+    --bg-color: #000;
+    --text-color: #fff;
+}
+
 @font-face {
     font-family: 'IBM_VGA';
     src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'IBM_VGA', monospace;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
 }
 
+.ascii-art, .typing-text {
+    margin: 0;
+}
+
 .ascii-art {
     white-space: pre;
     line-height: 1;
     overflow-x: auto;
-    margin: 0;
     padding: 0;
 }
 
@@ -33,7 +42,7 @@ body {
 
 .terminal-links li:before {
     content: '$ ';
-    color: #0f0;
+    color: var(--terminal-green);
 }
 
 .terminal-links a {
@@ -42,6 +51,17 @@ body {
 }
 
 .terminal-links .selected {
-    background-color: #0f0;
-    color: #000;
+    background-color: var(--terminal-green);
+    color: var(--bg-color);
+}
+
+.typing-text::after {
+    content: '|';
+    color: var(--terminal-green);
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 0 }
+    50% { opacity: 1 }
 }
