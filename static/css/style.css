@@ -18,6 +18,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    display: block;
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .ascii-art {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
 }
 
 .terminal-links {
@@ -44,4 +53,8 @@ body {
 .terminal-links a {
     text-decoration: none;
     color: inherit;
+}
+
+main {
+    overflow-x: hidden;
 }
