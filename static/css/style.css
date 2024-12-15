@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     font-family: 'IBM_VGA', monospace;
     line-height: 1.6;
     margin: 0;
@@ -13,20 +13,11 @@ body {
 }
 
 .ascii-art {
-    font-family: monospace;
     white-space: pre;
+    line-height: 1;
+    overflow-x: auto;
     margin: 0;
     padding: 0;
-    line-height: 1;
-    display: block;
-    overflow-x: auto;
-}
-
-@media (max-width: 768px) {
-    .ascii-art {
-        overflow-x: hidden;
-        max-width: 100%;
-    }
 }
 
 .terminal-links {
@@ -45,16 +36,12 @@ body {
     color: #0f0;
 }
 
-.terminal-links li.selected {
-    background-color: #0f0;
-    color: #000;
-}
-
 .terminal-links a {
     text-decoration: none;
     color: inherit;
 }
 
-main {
-    overflow-x: hidden;
+.terminal-links .selected {
+    background-color: #0f0;
+    color: #000;
 }
