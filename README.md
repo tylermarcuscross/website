@@ -1,6 +1,6 @@
 # Personal Website
 
-A minimalist terminal-style personaxl website built with HTML, CSS, and JavaScript.
+A minimalist terminal-style personal website built with HTML, CSS, and JavaScript.
 
 ## Built Out 
 - Terminal-inspired design
