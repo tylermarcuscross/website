@@ -59,15 +59,16 @@ body {
     50% { opacity: 1 }
 }
 
-/* Simple mobile adjustments */
-@media screen and (max-width: 768px) {
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
     body {
         padding: 10px;
         font-size: 20px;
     }
 
     .ascii-art {
-        display: none; /* Hide ASCII art completely on mobile */
+         /* Hide ASCII art completely on mobile */
+        display: none;
     }
 
     .typing-text {
