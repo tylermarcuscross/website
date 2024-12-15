@@ -71,9 +71,8 @@ body {
         padding: 10px;
         font-size: 20px;
     }
-
+    /* Hide ASCII art completely on mobile */
     .ascii-art {
-         /* Hide ASCII art completely on mobile */
         display: none;
     }
 
