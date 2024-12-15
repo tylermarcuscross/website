@@ -33,17 +33,23 @@ body {
     cursor: pointer;
 }
 
-.terminal-links li:before {
+.terminal-links a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.terminal-links a:before {
     content: '$ ';
     color: var(--terminal-green);
 }
 
-.terminal-links a {
-    text-decoration: none;
-    color: inherit;
+.terminal-links li:before {
+    content: none;
 }
 
-.terminal-links .selected {
+.terminal-links .selected, .terminal-links li:active {
     background-color: var(--terminal-green);
     color: var(--bg-color);
 }
