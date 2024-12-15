@@ -23,6 +23,7 @@ body {
     padding: 0;
 }
 
+/* Terminal Links */
 .terminal-links {
     list-style: none;
     padding: 0;
@@ -31,6 +32,10 @@ body {
 .terminal-links li {
     padding: 5px 0;
     cursor: pointer;
+}
+
+.terminal-links li:before {
+    content: none;
 }
 
 .terminal-links a {
@@ -45,15 +50,13 @@ body {
     color: var(--terminal-green);
 }
 
-.terminal-links li:before {
-    content: none;
-}
-
-.terminal-links .selected, .terminal-links li:active {
+.terminal-links .selected, 
+.terminal-links li:active {
     background-color: var(--terminal-green);
     color: var(--bg-color);
 }
 
+/* Typing animation */
 .typing-text::after {
     content: '|';
     color: var(--terminal-green);
@@ -61,8 +64,8 @@ body {
 }
 
 @keyframes blink {
-    from, to { opacity: 0 }
-    50% { opacity: 1 }
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 /* Mobile adjustments */
@@ -71,7 +74,7 @@ body {
         padding: 10px;
         font-size: 20px;
     }
-    /* Hide ASCII art completely on mobile */
+
     .ascii-art {
         display: none;
     }
