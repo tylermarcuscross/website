@@ -13,15 +13,13 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'IBM_VGA', monospace;
-    line-height: 1.6;
-    margin: 0;
     padding: 20px;
 }
 
 .ascii-art {
     white-space: pre;
     line-height: 1;
-    overflow-x: auto;
+    overflow-x: clip;
     padding: 0;
 }
 
@@ -59,4 +57,26 @@ body {
 @keyframes blink {
     from, to { opacity: 0 }
     50% { opacity: 1 }
+}
+
+/* Simple mobile adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .ascii-art {
+        display: none; /* Hide ASCII art completely on mobile */
+    }
+
+    .typing-text {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .terminal-links li {
+        padding: 15px 0;
+        font-size: 24px;
+    }
 }
