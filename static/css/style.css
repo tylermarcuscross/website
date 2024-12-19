@@ -14,7 +14,6 @@ body {
     color: var(--text-color);
     font-family: 'IBM_VGA', monospace;
     padding: 20px;
-    cursor: url('../cursors/green.cur'), auto; 
 }
 
 .ascii-art {
