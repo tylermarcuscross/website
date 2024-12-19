@@ -12,7 +12,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'IBM_VGA', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     padding: 20px;
 }
 
