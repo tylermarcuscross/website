@@ -1,5 +1,5 @@
 :root {
-    --terminal-green: #0f0;
+    --terminal-green: #800080;
     --bg-color: #000;
     --text-color: #fff;
 }
@@ -27,6 +27,7 @@ body {
 .terminal-links {
     list-style: none;
     padding: 0;
+    max-width: 90ch;
 }
 
 .terminal-links li {
