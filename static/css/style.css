@@ -32,12 +32,18 @@ body {
 .terminal-links li {
     padding: 5px 0;
     cursor: pointer;
+    /* Ensure li takes up full width of parent container */
+    /* This prevents any empty space that might not be clickable */
+    width: 100%;
 }
 
 .terminal-links a {
     text-decoration: none;
     color: inherit;
+    /* Make anchor a block-level element so it can expand to fill its container */
     display: block;
+    /* Ensure anchor fills entire width of li element */
+    /* Combined with display: block, this makes the entire area clickable */
     width: 100%;
 }
 
