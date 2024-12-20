@@ -13,21 +13,20 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'JuliaMono', monospace;
-    padding: 20px;
     overscroll-behavior: none;
+    padding-left: 10px;
 }
 
 .ascii-art {
     white-space: pre;
     line-height: 1;
     overflow-x: clip;
-    padding: 0;
 }
 
 /* Terminal Links */
 .terminal-links {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
     max-width: 90ch;
 }
 
