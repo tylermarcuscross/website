@@ -1,5 +1,5 @@
 :root {
-    --terminal-green: #800080;
+    --terminal-purple: #800080;
     --bg-color: #000;
     --text-color: #fff;
 }
@@ -26,6 +26,7 @@ body {
     list-style: none;
     padding-left: 0;
     max-width: 90ch;
+    width: 100%;
 }
 
 .terminal-links li {
@@ -36,23 +37,25 @@ body {
 .terminal-links a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    width: 100%;
 }
 
 .terminal-links a:before {
     content: '$ ';
-    color: var(--terminal-green);
+    color: var(--terminal-purple);
 }
 
 .terminal-links .selected, 
 .terminal-links li:active {
-    background-color: var(--terminal-green);
+    background-color: var(--terminal-purple);
     color: var(--bg-color);
 }
 
 /* Typing animation */
 .typing-text::after {
     content: '|';
-    color: var(--terminal-green);
+    color: var(--terminal-purple);
     animation: blink 0.75s step-end infinite;
 }
 
