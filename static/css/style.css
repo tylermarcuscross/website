@@ -14,7 +14,7 @@ body {
     color: var(--text-color);
     font-family: 'JuliaMono', monospace;
     overscroll-behavior: none;
-    padding-left: 10px;
+    padding: 20px;
 }
 
 .ascii-art {
