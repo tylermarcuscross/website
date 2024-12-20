@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    /*
+     * Typing Animation Section
+     * Creates a typewriter effect by gradually displaying text one character at a time.
+     * 1. Selects the element with class 'typing-text'
+     * 2. Stores the original text and clears the element
+     * 3. Uses setTimeout to add one character every 35ms
+     */
     const text = document.querySelector('.typing-text');
     const content = text.textContent;
     text.textContent = '';
@@ -14,30 +21,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     type();
 
+    /*
+     * Terminal-Style Navigation
+     * Implements keyboard and mouse navigation for a list of links:
+     * - Tracks currently selected item
+     * - Allows navigation with Up/Down arrow keys
+     * - Enter key triggers the selected link
+     * - Mouse hover updates selection
+     * - Uses modulo for circular navigation through the list
+     */
     const links = document.querySelectorAll('.terminal-links li');
     let currentIndex = 0;
     
-    links[currentIndex].classList.add('selected');
+    function updateSelection(newIndex) {
+        links[currentIndex].classList.remove('selected');
+        currentIndex = newIndex;
+        links[currentIndex].classList.add('selected');
+    }
+    
+    updateSelection(0);
     
     links.forEach((link, index) => {
-        link.addEventListener('mouseenter', () => {
-            links[currentIndex].classList.remove('selected');
-            currentIndex = index;
-            links[currentIndex].classList.add('selected');
-        });
+        link.addEventListener('mouseenter', () => updateSelection(index));
     });
     
     document.addEventListener('keydown', function(e) {
-        links[currentIndex].classList.remove('selected');
-        
         if (e.key === 'ArrowUp') {
-            currentIndex = (currentIndex - 1 + links.length) % links.length;
+            updateSelection((currentIndex - 1 + links.length) % links.length);
         } else if (e.key === 'ArrowDown') {
-            currentIndex = (currentIndex + 1) % links.length;
+            updateSelection((currentIndex + 1) % links.length);
         } else if (e.key === 'Enter') {
             links[currentIndex].querySelector('a').click();
         }
-        
-        links[currentIndex].classList.add('selected');
     });
 });
