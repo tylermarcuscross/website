@@ -19,6 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     links[currentIndex].classList.add('selected');
     
+    links.forEach((link, index) => {
+        link.addEventListener('mouseenter', () => {
+            links[currentIndex].classList.remove('selected');
+            currentIndex = index;
+            links[currentIndex].classList.add('selected');
+        });
+    });
+    
     document.addEventListener('keydown', function(e) {
         links[currentIndex].classList.remove('selected');
         
