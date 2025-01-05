@@ -23,7 +23,6 @@ body {
 
 /* Terminal Links */
 .terminal-links {
-    list-style: none;
     padding-left: 0;
     max-width: 90ch;
     width: 100%;
@@ -35,6 +34,7 @@ body {
     /* Ensure li takes up full width of parent container */
     /* This prevents any empty space that might not be clickable */
     width: 100%;
+    list-style: none;
 }
 
 .terminal-links a {

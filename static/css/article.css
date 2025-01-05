@@ -1,0 +1,44 @@
+.terminal-article {
+    max-width: 90ch;
+    margin: 2rem auto;
+    line-height: 1.6;
+}
+
+.terminal-article h1 {
+    color: var(--terminal-purple);
+    margin-bottom: 0.5rem;
+}
+
+.terminal-article time {
+    display: block;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.terminal-article h2 {
+    color: var(--terminal-purple);
+    margin-top: 2rem;
+}
+
+.terminal-article p {
+    margin: 1rem 0;
+}
+
+.terminal-article code {
+    background: #1a1a1a;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.terminal-article pre {
+    background: #1a1a1a;
+    padding: 1rem;
+    overflow-x: auto;
+    border-left: 3px solid var(--terminal-purple);
+}
+
+@media screen and (max-width: 600px) {
+    .terminal-article {
+        font-size: 18px;
+    }
+} 
