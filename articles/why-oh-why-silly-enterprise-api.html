@@ -37,7 +37,7 @@
             </figure>
 
             <p>
-                Here's how it actually works: Every calendar has a default availability group, and for this first group, the availabilityGroupID is identical to the calendarID. When you create additional availability groups for a calendar, Acuity generates new unique IDs for these groups. While these IDs are different from the original calendarId, they function similarly in many ways. For example, you can use these IDs interchangeably with calendarIds in endpoints like:
+                Here's how it actually works: Every calendar has a default availability group, and for this first group, the availabilityGroupID is identical to the calendarID. When you create additional availability groups for a calendar, Acuity generates new unique IDs for these groups. While these IDs are different from the original calendarId, they function similarly in many ways. For example, you can use these IDs interchangeably with calendarID in endpoints like:
             </p>
 
             <ul>
@@ -70,7 +70,7 @@
             </p>
 
             <p>
-                The override-hours endpoint can be used to manage both calendar and availability group hours. Remember, when updating override hours for a specific availability group, you use the availability groupID in place of the calendarID parameter. Previously, this endpoint had a quirk where it would return misleading data, but after some communication with Acuity's team, they've patched this behavior. Here's an example of how the endpoint works:
+                The override-hours endpoint can be used to manage both calendar and availability group hours. Remember, when updating override hours for a specific availability group, you use the availability groupID in place of the calendarID parameter. Previously, this endpoint had a quirk where it would return misleading data, but after some communication with Acuity's team, they've patched this behavior. Here's an example:
             </p>
 
             <pre><code>curl -X POST "https://acuityscheduling.com/api/enterprise/v1/users/{effectiveUserId}/calendars/10973203/override-hours" \
@@ -85,27 +85,11 @@
 }'</code></pre>
 
             <p>
-                While you should receive a response that accurately reflects your update, I'd recommend testing your implemenation with a subsequebt GET request to verify you've updated the correct availability group.
+                While you should receive a response that accurately reflects your update, I'd recommend testing your implementation with a subsequent GET request to verify you've updated the correct availability group.
             </p>
 
-            <pre><code>curl -X POST "https://acuityscheduling.com/api/enterprise/v1/users/{effectiveUserId}/calendars/10973203/override-hours" \
--d '{
-    "hours": {
-      "Monday": [],
-      "Tuesday": ["9:00am-5:00pm"]
-    },
-    "start": "2024-11-05",
-    "end": "2024-11-05"
-}'</code></pre>
-
             <p>
-                The response you'll get might look like this:
-            </p>
-
-            <pre><code>{"data":{"id":5093367718,"calendarId":5909671,"hours":{"Sunday":["1:00pm-6:30pm"],...}}}</code></pre>
-
-            <p>
-                Notice how the response shows a completely different calendarId (5909671) and different hours than what we submitted. Don't panic! Despite this misleading response, the update actually works correctly. You can verify this with a GET request:
+                The response you'll get should look something like this:
             </p>
 
             <pre><code>{"data":[{
@@ -121,7 +105,7 @@
 }]}</code></pre>
 
             <p>
-                The GET response confirms that our original update was successful, showing the correct calendarId and hours. This pattern is consistent: while the POST response contains seemingly incorrect data, the actual updates are applied correctly and can be verified through GET requests.
+                The GET response confirms our update was successful, showing the correct calendarId and hours. While this endpoint previously returned inconsistent data, Acuity has since fixed this behavior, making it more reliable for calendar management operations.
             </p>
         </section>
 
