@@ -26,9 +26,9 @@
         </section>
 
         <section>
-            <h2>Bad Documentation...</h2>
+            <h2>Confused Documentation...</h2>
             <p>
-                One of the most confusing aspects of the Acuity Enterprise API documentation is how it presents availabilityGroupIDs and calendarIDs as two distinct concepts. In reality, availability groups are just a special type of calendar, and understanding this relationship is key to working with the API.
+                The API documentation is might have you thinking availabilityGroupIDs and calendarIDs are two different things, because it seperates them out as two different paramemters, and it gives them two different names. In reality, availability groups are just a special type of calendar, and understanding this relationship is key to working with the API. Take a look at this screenshot from the documentation:
             </p>
 
             <figure>
@@ -37,7 +37,7 @@
             </figure>
 
             <p>
-                Here's how it actually works: Every calendar has a default availability group, and for this first group, the availabilityGroupID is identical to the calendarID. When you create additional availability groups for a calendar, Acuity generates new unique IDs for these groups. While these IDs are different from the original calendarId, they function similarly in many ways. For example, you can use these IDs interchangeably with calendarID in endpoints like:
+                This seperation is misleading. Here's how the data model actually works: Every calendar has a default availability group, and for this first group, the availabilityGroupID is identical to the calendarID. When you create additional availability groups for a calendar, Acuity generates new unique IDs for these groups. While these IDs are different from the original calendarId, they function similarly in many ways. For example, you can use these IDs interchangeably with calendarID in endpoints like:
             </p>
 
             <ul>
@@ -105,7 +105,14 @@
 }]}</code></pre>
 
             <p>
-                The GET response confirms our update was successful, showing the correct calendarId and hours. While this endpoint previously returned inconsistent data, Acuity has since fixed this behavior, making it more reliable for calendar management operations.
+                Hopefully, the GET response confirms our update was successful, showing the correct calendarID and hours. While this endpoint previously returned inconsistent data, Acuity has promised to have fixed this behavior, making it more reliable for calendar management operations.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>
+                The Acuity Enterprise API has its quirks, but it's potentially your the only option for dynamically managing availability for different appointment types if you've built your systems around their platforms. In another post, I'll cover how to use the API to manage availability for different appointment types.
             </p>
         </section>
 
