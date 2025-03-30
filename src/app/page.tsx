@@ -32,10 +32,7 @@ const Home: React.FC = () => {
         <motion.p custom={0} className="mb-2">
           Currently building data systems in healthcare. 
           Passionate about leveraging machine learning to solve complex, human-centered problems. 
-        </motion.p>
-        <motion.p custom={1}>
-          When I'm not working with data, I'm an enthusiastic volleyball player 
-          and music listener.
+          When I'm not working with data, I'm playing volleyball or listening to music.
         </motion.p>
       </motion.div>
       <motion.div initial={{ y: 20, opacity: 0 }} animate={controls} custom={2}>
