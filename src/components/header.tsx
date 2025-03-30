@@ -30,9 +30,7 @@ const Header: React.FC = () => {
         <div className="flex flex-col space-y-1 text-sm leading-none">
           <Avatar>
             <AvatarImage src="https://github.com/tylermarcuscross.png" />
-            <AvatarFallback>TC</AvatarFallback>
           </Avatar>
-
           <Link href="/" className="text-lg font-bold" title="home">
             Tyler Cross
           </Link>
