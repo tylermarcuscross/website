@@ -3,11 +3,9 @@ import Link from "@/components/link";
 import { FaGithubAlt, FaCopyright } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 
 const Footer: React.FC = () => {
   const yearShort = "'" + new Date().getFullYear().toString().slice(-2);
-  const { theme } = useTheme();
   
   return (
     <div className="prose">

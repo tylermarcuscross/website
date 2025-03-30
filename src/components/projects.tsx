@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 import projects from "@/data/projects.json";
-import { useTheme } from "next-themes";
 
 interface Project {
   name: string;
