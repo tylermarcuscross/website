@@ -1,7 +1,7 @@
 [
   {
     "name": "pushtoprod.ai",
-    "href": "https://github.com/push-to-prod-ai/push-to-prod",
+    "href": "https://pushtoprod.me/",
     "description": "A documentation engine and workflow accellerator for product managers and developers.",
     "technologies": ["py", "ts", "ml"]
   },
