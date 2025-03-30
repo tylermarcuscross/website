@@ -6,12 +6,13 @@ import { Metadata, meta, images } from "@/lib/metadata";
 
 const font = Inter({ subsets: ["latin-ext"] });
 
-export const metadata = new Metadata(
-  "https://tylercross.me",
-  meta,
-  images,
-  "/logo.svg",
-);
+export const metadata = {
+  title: "Tyler Cross",
+  description: "Personal website",
+  icons: {
+    icon: { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+  },
+};
 
 export default function RootLayout({
   children,
