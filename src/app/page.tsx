@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Projects from "@/components/projects";
+import Link from "@/components/link";
 
 const Home: React.FC = () => {
   const controls = useAnimation();
@@ -29,11 +30,19 @@ const Home: React.FC = () => {
         animate={controls}
         className="flex flex-col gap-2 mt-4 mb-6"
       >
-        <motion.p custom={0} className="mb-2">
-          Currently building data systems in healthcare. 
-          Passionate about leveraging machine learning to solve complex, human-centered problems. 
-          When I'm not working with data, I'm playing volleyball or listening to music.
-        </motion.p>
+        <motion.div custom={0} className="mb-2">
+          <p className="mb-1">
+            Hi! This is Tyler 😌. I'm a data analyst at a telehealth clinic in NYC.<sup className="text-xs">1</sup> My background is in emergency medicine, working for several years as an EMT before I found myself interested in software and ML. In 2023, I finished undergrad with BA in philosophy, and am about to complete an MS in data science.<sup className="text-xs">2</sup> I'm a fan of {" "}
+            <Link href="https://open.spotify.com/playlist/7LNaFJv5xVznzBIMZD15Gr?si=2i-aINDhRL2zPccqDTnyPQ" title="Techno playlist">
+            techno
+            </Link>, love espresso, and am working on a planted aquarium.
+          </p>
+          
+          <div className="text-xs mt-4 text-zinc-600 dark:text-zinc-400">
+            <p className="mb-1"><sup>1</sup>  <Link href="https://www.ophelia.com/" title="Ophelia Health">Ophelia Health</Link>, I've had several roles, but have recently been leaning more technical.</p>
+            <p><sup>2</sup> Undergrad was Cornell, Master's from Berkeley.</p>
+          </div>
+        </motion.div>
       </motion.div>
       <motion.div initial={{ y: 20, opacity: 0 }} animate={controls} custom={2}>
         <Projects />

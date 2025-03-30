@@ -43,7 +43,7 @@ export default function Projects() {
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <h3 className="text-sm font-medium font-mono text-zinc-800 dark:text-zinc-200">
+                <h3 className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
                   {project.name}
                 </h3>
                 <div className="flex gap-1.5">
