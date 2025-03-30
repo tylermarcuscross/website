@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             alt="Tyler Cross" 
             width={20} 
             height={20} 
-            className="inline-block" 
+            className="inline-block dark:invert-0 invert" 
           /> 
           <span className="ml-2">{yearShort}</span>{" "}
         </span>

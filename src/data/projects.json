@@ -10,6 +10,6 @@
     "name": "lainsworld",
     "href": "https://tylermarcuscross.github.io/lainsworld/",
     "description": "A 90s style art project inspired by Serial Experiments Lain.",
-    "technologies": ["ts"]
+    "technologies": ["ts", "react", "genai"]
   }
 ]
