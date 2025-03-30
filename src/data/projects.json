@@ -1,0 +1,15 @@
+[
+  {
+    "name": "pushtoprod.ai",
+    "href": "https://github.com/push-to-prod-ai/push-to-prod",
+    "description": "A documentation engine and workflow accellerator for product managers and developers.",
+    "technologies": ["py", "ts", "ml"]
+  },
+
+  {
+    "name": "lainsworld",
+    "href": "https://github.com/tylermarcuscross/lainsworld",
+    "description": "A 90s style art project inspired by Serial Experiments Lain.",
+    "technologies": ["ts"]
+  }
+]
