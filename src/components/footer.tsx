@@ -1,25 +1,27 @@
 import React from "react";
 import Link from "@/components/link";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithubAlt } from "react-icons/fa";
+import { FaGithubAlt, FaCopyright } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
-  const year = new Date().getFullYear();
+  const yearShort = "'" + new Date().getFullYear().toString().slice(-2);
+  
   return (
     <div className="prose">
       <hr />
 
       <footer className="flex justify-between mt-3">
-        <span>
-          &copy; tyler cross {year} |{" "}
-          <Link
-            href="https://github.com/tylermarcuscross/website"
-            className="dark:text-zinc-300 text-zinc-800"
-            title="source"
-          >
-            source
-          </Link>
+        <span className="flex items-center">
+          <FaCopyright className="mr-1" /> 
+          <Image 
+            src="/icon.png" 
+            alt="Tyler Cross" 
+            width={20} 
+            height={20} 
+            className="inline-block" 
+          /> 
+          <span className="ml-2">{yearShort}</span>{" "}
         </span>
         <div className="flex gap-4">
           <Link href="mailto:hi@tyler.cross.me" title="email">
@@ -29,7 +31,6 @@ const Footer: React.FC = () => {
           <Link href="https://github.com/tylermarcuscross" title="github">
             <FaGithubAlt />
           </Link>
-
         </div>
       </footer>
     </div>
