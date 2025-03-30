@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       >
         <motion.div custom={0} className="mb-2">
           <p className="mb-1">
-            Hi! This is Tyler 😌. I'm a data analyst at a telehealth clinic in NYC.<sup className="text-xs">1</sup> My background is in emergency medicine, working for several years as an EMT before I found myself interested in software and ML. In 2023, I finished undergrad with BA in philosophy, and am about to complete an MS in data science.<sup className="text-xs">2</sup> I'm a fan of {" "}
+            Hi! This is Tyler 😌. I'm a data analyst at a telehealth clinic in NYC.<sup className="text-xs">1</sup> My background is in emergency medicine, working for several years as an EMT before I found myself interested in software and ML. In 2023, I finished undergrad with a BA in philosophy and am about to complete an MS in data science.<sup className="text-xs">2</sup> I'm a fan of {" "}
             <Link href="https://open.spotify.com/playlist/5WRxTRXvEL2njjY9oRWhUc" title="Techno playlist">
             techno
             </Link>, love espresso, and am working on a planted aquarium 🪷.
