@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <IoMdMailOpen />
           </Link>
 
-          <Link href="https://github.com/tylermarcuscrosss" title="github">
+          <Link href="https://github.com/tylermarcuscross" title="github">
             <FaGithubAlt />
           </Link>
 
