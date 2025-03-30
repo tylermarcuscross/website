@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "@/components/link";
-import { FaGithubAlt, FaCopyright } from "react-icons/fa";
+import { FaGithubAlt, FaRegCopyright } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import Image from "next/image";
 
@@ -13,12 +13,12 @@ const Footer: React.FC = () => {
 
       <footer className="flex justify-between mt-3">
         <span className="flex items-center">
-          <FaCopyright className="mr-1" /> 
+          <FaRegCopyright className="mr-1" /> 
           <Image 
             src="/icon.png" 
             alt="Tyler Cross" 
-            width={20} 
-            height={20} 
+            width={18} 
+            height={18} 
             className="inline-block dark:invert-0 invert" 
           /> 
           <span className="ml-2">{yearShort}</span>{" "}
