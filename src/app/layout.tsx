@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Metadata, meta, images } from "@/lib/metadata";
 
 const font = Inter({ subsets: ["latin-ext"] });
 
