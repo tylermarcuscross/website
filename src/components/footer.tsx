@@ -10,7 +10,6 @@ const Footer: React.FC = () => {
   return (
     <div className="prose">
       <hr />
-
       <footer className="flex justify-between mt-3">
         <span className="flex items-center">
           <FaRegCopyright className="mr-1" /> 
@@ -24,7 +23,7 @@ const Footer: React.FC = () => {
           <span className="ml-2">{yearShort}</span>{" "}
         </span>
         <div className="flex gap-4">
-          <Link href="mailto:hi@tyler.cross.me" title="email">
+          <Link href="mailto:tyler.cross@me.com" title="email">
             <IoMdMailOpen />
           </Link>
 
