@@ -8,7 +8,7 @@
 
   {
     "name": "icd10-classification",
-    "href": "https://github.com/tylermarcuscross/explainable-medical-coding/blob/modernbert-architecture-change/train_modernbert.py/",
+    "href": "https://github.com/tylermarcuscross/explainable-medical-coding/blob/7a736486b5ad2459fc33ca24073d21ea79160a54/article/article.pdf",
     "description": "A fork of Edin et al's (2024) EMNLP paper, with an updated ModernBERT architecture.",
     "technologies": ["py", "ml"]
   },
