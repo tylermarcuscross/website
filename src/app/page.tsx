@@ -32,8 +32,8 @@ const Home: React.FC = () => {
       >
         <motion.div custom={0} className="mb-2">
           <p className="mb-1">
-            Hi! This is Tyler 😌. I'm a data analyst at a telehealth clinic in NYC.<sup className="text-xs">1</sup> My background is in emergency medicine, where I worked as an EMT for several years until I became interested in software and ML. I graduated with a BA in philosophy in 2023 and am now finishing my MS in data science.<sup className="text-xs">2</sup> I'm a fan of {" "}
-            <Link href="https://open.spotify.com/playlist/5WRxTRXvEL2njjY9oRWhUc" title="Techno playlist">
+            Hi! This is Tyler 😌. I'm a data analyst at a telehealth clinic in NYC.<sup className="text-xs">1</sup> My background is in emergency medicine, where I worked as an EMT for several years until I became interested in software and ML. I graduated with a BA in philosophy in 2023 and an MS in data science in 2025.<sup className="text-xs">2</sup> I'm a fan of {" "}
+            <Link href="https://open.spotify.com/playlist/37i9dQZF1DX6J5NfMJS675" title="Techno playlist">
             techno
             </Link>, love espresso, and am working on a planted aquarium 🪷.
           </p>
